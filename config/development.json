@@ -1,0 +1,8 @@
+{
+  "mongo": {
+    "url": "mongodb://localhost/irh-microservice"
+  },
+  "server": {
+    "port": 8000
+  }
+}

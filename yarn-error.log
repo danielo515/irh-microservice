@@ -1,0 +1,48 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add hapi hoek joi glue good
+
+PATH: 
+  C:\Users\rdani\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\rdani\bin;C:\Python27;C:\Python27\Scripts;C:\Program Files\ImageMagick-7.0.4-Q16;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_144\bin;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\OpenVPN\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files\nodejs;C:\Program Files (x86)\Paragon Software\ExtFS for Windows;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Users\rdani\AppData\Local\Microsoft\WindowsApps;C:\apache-maven-3.3.9\bin;C:\Users\rdani\AppData\Local\Yarn\.bin;C:\Program Files\Docker Toolbox;C:\Users\rdani\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\rdani\.lein\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;C:\Users\rdani\.rvm\bin
+
+Yarn version: 
+  0.23.2
+
+Node version: 
+  8.2.1
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "irh-microservice",
+    "version": "0.0.1",
+    "description": "Microservice for store management",
+    "scripts": {
+      "test": "node node_modules/lab/bin/lab -a code -t 100 -v",
+      "test-cov-html": "node node_modules/lab/bin/lab -a code -r html -o coverage.html",
+      "start": "node lib/start.js"
+    },
+    "main": "lib/index.js",
+    "author": {
+      "name": "Danielo Rodríguez Rivero"
+    },
+    "keywords": [
+      "rest,microservice"
+    ],
+    
+    "private": true
+    
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: connect ETIMEDOUT 151.101.60.162:443
+      at Object.exports._errnoException (util.js:1024:11)
+      at exports._exceptionWithHostPort (util.js:1047:20)
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1150:14)
