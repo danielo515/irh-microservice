@@ -6,7 +6,10 @@
     "test": "lab -a code -t 100 -v",
     "test-cov-html": "lab -a code -r html -o coverage.html",
     "start": "node lib/start.js",
-    "start:dev": "nodemon lib/start.js"
+    "start:dev": "nodemon lib/start.js",
+    "build": "cross-var docker build . -t irh-microservice:$npm_package_version -t irh-microservice:latest",
+    "docker-push": " docker push",
+    "deploy": "npm run build && npm run docker-push"
   },
   "main": "lib/index.js",
   "author": {
@@ -31,6 +34,7 @@
     "vision": "^4.1.1"
   },
   "devDependencies": {
+    "cross-var": "^1.0.3",
     "eslint": "^4.8.0",
     "eslint-config-hapi": "^10.1.0",
     "eslint-plugin-hapi": "^4.0.0",
