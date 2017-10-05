@@ -6,7 +6,7 @@
     "test": "lab -a code -t 100 -v",
     "test-cov-html": "lab -a code -r html -o coverage.html",
     "start": "node lib/start.js",
-    "start:dev": "nodemon lib/start.js",
+    "start:dev": "nodemon --inspect lib/start.js",
     "build": "cross-var docker build . -t irh-microservice:$npm_package_version -t irh-microservice:latest",
     "docker-push": "cross-var docker push irh-microservice:$npm_package_version",
     "deploy": "npm run build && npm run docker-push"
