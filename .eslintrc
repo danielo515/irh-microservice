@@ -1,6 +1,6 @@
 {
     "extends": "hapi",
     "parserOptions": {
-        "ecmaVersion": 6
+        "ecmaVersion": 8
     }
 }

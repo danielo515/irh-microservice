@@ -5,7 +5,8 @@
   "scripts": {
     "test": "lab -a code -t 100 -v",
     "test-cov-html": "lab -a code -r html -o coverage.html",
-    "start": "node lib/start.js"
+    "start": "node lib/start.js",
+    "start:dev": "nodemon lib/start.js"
   },
   "main": "lib/index.js",
   "author": {
@@ -32,6 +33,7 @@
   "devDependencies": {
     "eslint": "^4.8.0",
     "eslint-config-hapi": "^10.1.0",
-    "eslint-plugin-hapi": "^4.0.0"
+    "eslint-plugin-hapi": "^4.0.0",
+    "nodemon": "^1.12.1"
   }
 }
