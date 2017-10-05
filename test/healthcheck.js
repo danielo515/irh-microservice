@@ -1,6 +1,6 @@
 // Load modules
 
-var Code = require('code');
+
 var Lab = require('lab');
 var Server = require('../lib');
 var Path = require('path');
@@ -14,7 +14,7 @@ var internals = {};
 
 var lab = exports.lab = Lab.script();
 var describe = lab.experiment;
-var expect = Code.expect;
+const expect = lab.expect;
 var it = lab.test;
 
 
@@ -29,7 +29,7 @@ describe('/ops/healthcheck', function () {
       server.inject('/ops/healthcheck', function (res) {
 
         expect(res.statusCode).to.equal(200);
-        expect(res.result).to.deep.equal({ message: 'ok' });
+        expect(res.result).to.equal({ message: 'ok' });
 
         server.stop(done);
       });
@@ -43,9 +43,11 @@ internals.manifest = {
       port: 0
     }
   ],
-  plugins: {
-    './healthcheck': {}
-  }
+  registrations: [
+    {
+      plugin: './healthcheck'
+    }
+  ]
 };
 
 internals.composeOptions = {

@@ -1,8 +1,7 @@
 // Load modules
 
-var Code = require('code');
+
 var Lab = require('lab');
-var Pkg = require('../package.json');
 var Server = require('../lib');
 var Path = require('path');
 
@@ -15,7 +14,7 @@ var internals = {};
 
 var lab = exports.lab = Lab.script();
 var describe = lab.experiment;
-var expect = Code.expect;
+const expect = lab.expect;
 var it = lab.test;
 
 
@@ -30,7 +29,7 @@ describe('/ops/version', function () {
       server.inject('/ops/version', function (res) {
 
         expect(res.statusCode).to.equal(200);
-        expect(res.result).to.deep.equal({ version: Pkg.version });
+        expect(res.result).to.equal({ version: process.env.npm_package_version });
 
         server.stop(done);
       });
@@ -44,9 +43,11 @@ internals.manifest = {
       port: 0
     }
   ],
-  plugins: {
-    './version': {}
-  }
+  registrations: [
+    {
+      plugin: './version'
+    }
+  ]
 };
 
 internals.composeOptions = {
